@@ -34,7 +34,7 @@ test('cli creates all icons in tmp directory', function (t) {
   t.plan(13)
   rimraf('tmp', function () {
     mkdirp('tmp', function () {
-      exec(pkg.bin + ' --input test/com.appbusinesspodcast.www.png --output tmp', function () {
+      exec('./bin/android-splash-generate.js --input test/com.appbusinesspodcast.www.png --output tmp', function () {
         t.ok(fs.existsSync('tmp/splash-port-hdpi.png'), 'splash-port-hdpi.png' + ' created')
         t.ok(fs.existsSync('tmp/splash-port-mdpi.png'), 'splash-port-mdpi.png' + ' created')
         t.ok(fs.existsSync('tmp/splash-port-ldpi.png'), 'splash-port-ldpi.png' + ' created')
